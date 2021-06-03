@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:skooltime/utils/routes.dart';
 
-class Login extends StatefulWidget {
-  @override
-  _LoginState createState() => _LoginState();
-}
-
-class _LoginState extends State<Login> {
-  String name='';
+class Signup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
+        body: SingleChildScrollView(
         child:Column(
           children: [
             //image
             SizedBox(height:30),
             Image.asset(
-              'assets/images/login.png',
+              'assets/images/1.jpg',
               fit: BoxFit.contain,
               height: 300,
             ),
@@ -28,7 +22,7 @@ class _LoginState extends State<Login> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal:32),
               child: Text(
-                'Welcome to Skooltime, $name',
+                'Welcome to Skooltime, here you will learn a lot and manage a lot',
               ),
             ),
 
@@ -40,15 +34,9 @@ class _LoginState extends State<Login> {
                   //textbox1
                   TextFormField(
                     decoration: InputDecoration(
-                      hintText: "Enter the UserName",
-                      labelText: "USERNAME"
+                      hintText: "Register the UserName",
+                      labelText: "REGISTER USERNAME"
                     ),
-                    onChanged: (value){
-                      name=value;
-                      setState(() {
-                        
-                      });
-                    },
                   ),
 
                   //textbox2
@@ -67,7 +55,7 @@ class _LoginState extends State<Login> {
               onPressed: (){
                 Navigator.pushNamed(context, MyRoutes.homeroute);
               }, 
-              child: Text('LOGIN')
+              child: Text('Signup')
             )
           ],
         )

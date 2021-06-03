@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:skooltime/screens/login.dart';
+import './screens/login.dart';
+import './screens/signup.dart';
+import './utils/routes.dart';
 import './screens/home.dart';
 
 void main(){
@@ -21,9 +23,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/login',
       routes: {
-        '/':(context)=> Home(),
-        '/login':(context)=>Login(),
-
+        MyRoutes.homeroute:(context) => Home(),
+        MyRoutes.loginroute:(context)=>Login(),
+        MyRoutes.signuproute: (context) => Signup()
       },
     );
   }
